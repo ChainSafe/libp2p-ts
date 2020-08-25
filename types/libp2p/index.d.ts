@@ -84,6 +84,8 @@ declare namespace LibP2p {
         remotePeer: import("peer-id")
     }
 
+    export type PeerType = Peer;
+
     export type Events =  'peer:discovery' | 'start' | 'stop';
     export type ConnectionEvents = 'peer:connect' | 'peer:disconnect';
 }
@@ -123,7 +125,7 @@ declare class PeerStore {
     readonly protoBook: ProtoBook;
     readonly metadataBook: MetadataBook;
     delete(peerId: import("peer-id")): boolean;
-    get(peerId: import("peer-id")): Peer;
+    get(peerId: import("peer-id")): Peer|undefined;
 }
 
 declare class Registrar {
