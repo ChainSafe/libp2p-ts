@@ -93,9 +93,37 @@ declare class AddressBook {
     getMultiaddrsForPeer(peerId: import("peer-id")): import("multiaddr")[];
 }
 
+declare class ProtoBook {
+    //peerId => protocols
+    readonly data: Map<string, string[]>;
+    set(peerId: import("peer-id"), protocols: string[]): ProtoBook;
+    add(peerId: import("peer-id"), protocols: string[]): ProtoBook;
+}
+
+declare class MetadataBook {
+    //peerId => protocols
+    readonly data: Map<string, Map<string, Buffer>>;
+    set(peerId: import("peer-id"), key: string, value: Buffer): ProtoBook;
+    get(peerId: import("peer-id")): Map<string, Buffer>;
+    getValue(peerId: import("peer-id"), key: string): Buffer;
+    delete(peerId: import("peer-id")): boolean;
+    deleteValue(peerId: import("peer-id"), key: string): boolean;
+}
+
+declare class Peer {
+    id: import("peer-id");
+    addresses: {multiaddr: import("multiaddr")}[];
+    protocols: string[];
+    metadata: Map<string, Buffer>;
+}
+
 declare class PeerStore {
-    readonly peers: Map<string, {id: import("peer-id"); addresses: {multiaddr: import("multiaddr")}[]; protocols: string[]}>;
+    readonly peers: Map<string, Peer>;
     readonly addressBook: AddressBook;
+    readonly protoBook: ProtoBook;
+    readonly metadataBook: MetadataBook;
+    delete(peerId: import("peer-id")): boolean;
+    get(peerId: import("peer-id")): Peer;
 }
 
 declare class Registrar {
