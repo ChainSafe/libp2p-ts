@@ -84,7 +84,12 @@ declare namespace LibP2p {
         remotePeer: import("peer-id")
     }
 
-    export type PeerType = Peer;
+    export type Peer = {
+      id: import("peer-id");
+      addresses: {multiaddr: import("multiaddr")}[];
+      protocols: string[];
+      metadata: Map<string, Buffer>;
+    }
 
     export type Events =  'peer:discovery' | 'start' | 'stop';
     export type ConnectionEvents = 'peer:connect' | 'peer:disconnect';
@@ -112,20 +117,13 @@ declare class MetadataBook {
     deleteValue(peerId: import("peer-id"), key: string): boolean;
 }
 
-declare class Peer {
-    id: import("peer-id");
-    addresses: {multiaddr: import("multiaddr")}[];
-    protocols: string[];
-    metadata: Map<string, Buffer>;
-}
-
 declare class PeerStore {
-    readonly peers: Map<string, Peer>;
+    readonly peers: Map<string, LibP2p.Peer>;
     readonly addressBook: AddressBook;
     readonly protoBook: ProtoBook;
     readonly metadataBook: MetadataBook;
     delete(peerId: import("peer-id")): boolean;
-    get(peerId: import("peer-id")): Peer|undefined;
+    get(peerId: import("peer-id")): LibP2p.Peer|undefined;
 }
 
 declare class Registrar {
