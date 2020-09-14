@@ -12,6 +12,7 @@ declare interface Stream<TSource = unknown, TReturn = unknown> {
   source: Source<TSource>;
   sink: Sink<TSource, TReturn>;
   close: () => void;
+  reset: () => void;
 }
 
 declare interface LibP2pConnection {
