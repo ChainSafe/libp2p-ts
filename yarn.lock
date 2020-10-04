@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@chainsafe/discv5@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@chainsafe/discv5/-/discv5-0.4.0.tgz#b9daae3646050fba759e27dab0d406c17b793202"
-  integrity sha512-z7sjulzAR1oS6ogsAG8QvChjreKRswzc341AQcJRtL3hkH7SfdzmGIO4dexdjtbt9pc15NXHYDHaNj5i9hA4KA==
+"@chainsafe/discv5@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@chainsafe/discv5/-/discv5-0.4.2.tgz#e8b7737925ba1a0d80c2d946d821edf501a53d20"
+  integrity sha512-qQN3PPWD1zikEPSVNx7lGiM7gGsveYYxT04KyIWEPOOYr/8b/tvHC6d+jbKPjsccYPbrudYRqdl3u30tZKrryA==
   dependencies:
     base64url "^3.0.1"
     bcrypto "^4.2.8"
@@ -383,7 +383,7 @@ node-gyp-build@^4.2.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.2.3.tgz#ce6277f853835f718829efb47db20f3e4d9c4739"
   integrity sha512-MN6ZpzmfNCRM+3t57PTJHgHyw/h4OWnZ6mR8P5j/uZtqQr46RRuDE/P+g3n0YR/AiYXeWixZZzaip77gdICfRg==
 
-peer-id@^0.14.0, peer-id@^0.14.1:
+peer-id@^0.14.1:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/peer-id/-/peer-id-0.14.1.tgz#61a822a33563419bb327800067ac06783a2f7935"
   integrity sha512-QSEyJy9fEOtgB/NVrlJvlxO1Q8ZKpTLJ/HBVTj7bGJFGnm4febqSB/KlEL4WYm/fgvriHM+Wkfea3yD1Uacllw==
