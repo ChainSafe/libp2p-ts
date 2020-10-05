@@ -11,12 +11,11 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@chainsafe/discv5": "^0.3.1",
+    "@chainsafe/discv5": "^0.4.2",
     "@types/node": "^13.7.0",
-    "libp2p-crypto": "^0.17.2",
-    "libp2p-gossipsub": "^0.4.5",
-    "multiaddr": "^7.4.3",
-    "peer-id": "^0.13.12"
+    "libp2p-crypto": "^0.18.0",
+    "multiaddr": "^8.0.0",
+    "peer-id": "^0.14.1"
   },
   "devDependencies": {
     "typescript": "^3.7.5"
