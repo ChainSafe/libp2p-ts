@@ -2,16 +2,18 @@
 # yarn lockfile v1
 
 
-"@chainsafe/discv5@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@chainsafe/discv5/-/discv5-0.4.2.tgz#e8b7737925ba1a0d80c2d946d821edf501a53d20"
-  integrity sha512-qQN3PPWD1zikEPSVNx7lGiM7gGsveYYxT04KyIWEPOOYr/8b/tvHC6d+jbKPjsccYPbrudYRqdl3u30tZKrryA==
+"@chainsafe/discv5@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@chainsafe/discv5/-/discv5-0.5.0.tgz#c97a88a7b09fa5e9102ef94f91cb13fa171834ad"
+  integrity sha512-YCy2l5fwPM+r7ABax6HSFwVSr9eXt2VpUYa/PM1FncIFV/cBxuvFzzPwqhlTGLgWZ9dw2Ol/2g6sBT/lMkSTdA==
   dependencies:
+    "@types/err-code" "^2.0.0"
     base64url "^3.0.1"
     bcrypto "^4.2.8"
     bigint-buffer "^1.1.5"
     debug "^4.1.1"
     dgram "^1.0.1"
+    err-code "^2.0.3"
     ip6addr "^0.2.3"
     is-ip "^3.1.0"
     libp2p-crypto "^0.18.0"
@@ -19,6 +21,11 @@
     peer-id "^0.14.1"
     rlp "^2.2.6"
     strict-event-emitter-types "^2.0.0"
+
+"@types/err-code@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/err-code/-/err-code-2.0.0.tgz#42550e9e7a487e6c64342799e803f33d4d0f985c"
+  integrity sha512-JDCwFVL1a8EE7gU7C9ugjEixhY2cqmeZwxf7QXYf2waEkTN4n033UYxlKib/xq+oNqLWimY46/3Pcs6xTXL65Q==
 
 "@types/node@^13.7.0":
   version "13.13.19"
@@ -160,7 +167,7 @@ elliptic@^6.5.2:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-err-code@^2.0.0:
+err-code@^2.0.0, err-code@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/err-code/-/err-code-2.0.3.tgz#23c2f3b756ffdfc608d30e27c9a941024807e7f9"
   integrity sha512-2bmlRpNKBxT/CRmPOlyISQpNj+qSeYvcym/uT0Jx2bMOlKLtSy1ZmLuVxSEKKyor/N5yhvp/ZiG1oE3DEYMSFA==

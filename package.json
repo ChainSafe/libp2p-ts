@@ -11,7 +11,7 @@
     "test": "echo \"No 'yarn run test' available\""
   },
   "dependencies": {
-    "@chainsafe/discv5": "^0.4.2",
+    "@chainsafe/discv5": "^0.5.0",
     "@types/node": "^13.7.0",
     "libp2p-crypto": "^0.18.0",
     "multiaddr": "^8.0.0",
