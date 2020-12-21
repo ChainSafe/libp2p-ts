@@ -135,6 +135,7 @@ declare class Registrar {
 }
 
 declare class ConnectionManager {
+    connections: Map<string, LibP2pConnection[]>;
     on(event: LibP2p.ConnectionEvents, cb: (event: LibP2pConnection) => any): this;
     once(event: LibP2p.ConnectionEvents, cb: (event: LibP2pConnection) => any): this;
     removeListener(event: LibP2p.ConnectionEvents, cb: (event: LibP2pConnection) => any): this;
